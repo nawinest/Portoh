@@ -1,0 +1,49 @@
+.main-title-container {
+    width: 100%;
+    height: 160px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.step-content {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.header-title {
+    font-size: 20px;
+    font-weight: 600;
+}
+
+.image-step {
+    width: 100%;
+}
+
+.image-step > img {
+    width: 100%;
+}
+
+.label-step {
+    width: 50px;
+    height: 50px;
+    border-radius: 25px;
+    color: white;
+    background: var(--base-purple-color);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 18px;
+    font-weight: 600;
+}
+
+.step-description {
+
+}
+
+.step-header {
+    display: grid;
+    grid-template-columns: 60px 1fr;
+}
