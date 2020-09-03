@@ -10,7 +10,7 @@ class BaseTemplateItem extends Component {
             <div className="image-cover-container">
                 <div className="image-cover-container-inner">
                     <Zoom>
-                    <img className="image-template-cover" src={this.props.data.images_cover} alt="template-cover" />
+                        <img className="image-template-cover" src={this.props.data.images_cover} alt="template-cover" />
                     </Zoom>
                 </div>
             </div>

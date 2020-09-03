@@ -125,10 +125,10 @@
     width: 130px;
 }
 
-
 .item-selection {
     flex: 1;
     width: 100%;
+    padding: 0.25rem;
 }
 
 .search-button {
@@ -136,7 +136,7 @@
     height: 44px;
     flex-grow: 1;
     background: var(--base-purple-color);
-    border:none;
+    border: none;
     color: white;
 }
 
@@ -160,142 +160,132 @@
     margin: 1rem 0;
     display: flex;
     flex-direction: column;
-    gap: 1em;
     align-items: flex-end;
 }
 
+.image-detail {
+    width: 100%;
+    margin: 1em 0;
+    border: 8px solid var(--base-purple-color);
+}
+
 @media only screen and (min-width: 600px) {
-  /* For tablets: */
-  .container-list {
-      grid-template-columns: 1fr 1fr;
-  }
-
-  .navbar-fixed-component {
-      bottom: unset;
-      top: 0;
-  }
-
-  .navbar-item-title {
-      display: block;
-      font-size: 14px !important;
-  }
-
-  .landing-banner-component {
-      grid-template-columns: 100%;
-  }
-
-  .base-image-banner {
-      display: none;
-  }
-
-  .base-navbar-item {
-      margin-left: 1em;
-  }
-
-  .list-item-li {
-      width: auto;
-  }
-
-  .base-navbar-component-height {
-      display: block;
-  }
-
-  .landing-banner-component {
-      height: 350px;
-  }
-
-  .main-title {
-      font-size: 44px;
-  }
-}
-
-@media only screen and (min-width: 768px) {
-  /* For desktop: */
-  .container-list {
-      grid-template-columns: 1fr 1fr 1fr;
-  }
-
-  .selection-option-search {
-      flex-direction: row;
-  }
-
-  .landing-banner-component {
-      grid-template-columns: 100%;
-  }
-
-  .navbar-fixed-component {
-      bottom: unset;
-      top: 0;
-  }
-
-  .base-image-banner {
-      display: none;
-  }
-
-  .navbar-item-title {
-      display: block;
-  }
-
-  .base-navbar-item {
-      margin-left: 1em;
-  }
-
-  .list-item-li {
-      width: auto;
-  }
-
-  .base-navbar-component-height {
-      display: block;
-  }
-
-  .landing-banner-component {
-      height: 350px;
-  }
-
-  .main-title {
-      font-size: 44px;
-  }
-}
-
-@media only screen and (min-width: 1024px) {
-
+    /* For tablets: */
     .container-list {
-        grid-template-columns: 1fr 1fr 1fr 1fr;
+        grid-template-columns: 1fr 1fr;
     }
 
-    .landing-banner-component {
-        grid-template-columns: 340px auto;
-    }
-
-    .base-image-banner {
-        display: block;
+    .image-detail {
+        width: 60%;
+        margin: 1em 0;
     }
 
     .navbar-fixed-component {
         bottom: unset;
         top: 0;
     }
-
     .navbar-item-title {
         display: block;
+        font-size: 14px !important;
     }
-
+    .landing-banner-component {
+        grid-template-columns: 100%;
+    }
+    .base-image-banner {
+        display: none;
+    }
     .base-navbar-item {
         margin-left: 1em;
     }
-
     .list-item-li {
         width: auto;
     }
-
     .base-navbar-component-height {
         display: block;
     }
-
     .landing-banner-component {
         height: 350px;
     }
+    .main-title {
+        font-size: 44px;
+    }
+}
 
+@media only screen and (min-width: 768px) {
+    /* For desktop: */
+    .container-list {
+        grid-template-columns: 1fr 1fr 1fr;
+    }
+    .selection-option-search {
+        flex-direction: row;
+    }
+    .landing-banner-component {
+        grid-template-columns: 100%;
+    }
+    .image-detail {
+        width: 60%;
+        margin: 1em 0;
+    }
+    .navbar-fixed-component {
+        bottom: unset;
+        top: 0;
+    }
+    .base-image-banner {
+        display: none;
+    }
+    .navbar-item-title {
+        display: block;
+    }
+    .base-navbar-item {
+        margin-left: 1em;
+    }
+    .list-item-li {
+        width: auto;
+    }
+    .base-navbar-component-height {
+        display: block;
+    }
+    .landing-banner-component {
+        height: 350px;
+    }
+    .main-title {
+        font-size: 44px;
+    }
+}
+
+@media only screen and (min-width: 1024px) {
+    .container-list {
+        grid-template-columns: 1fr 1fr 1fr 1fr;
+    }
+    .image-detail {
+        width: 40%;
+        margin: 1em 0;
+    }
+    .landing-banner-component {
+        grid-template-columns: 340px auto;
+    }
+    .base-image-banner {
+        display: block;
+    }
+    .navbar-fixed-component {
+        bottom: unset;
+        top: 0;
+    }
+    .navbar-item-title {
+        display: block;
+    }
+    .base-navbar-item {
+        margin-left: 1em;
+    }
+    .list-item-li {
+        width: auto;
+    }
+    .base-navbar-component-height {
+        display: block;
+    }
+    .landing-banner-component {
+        height: 350px;
+    }
     .main-title {
         font-size: 44px;
     }

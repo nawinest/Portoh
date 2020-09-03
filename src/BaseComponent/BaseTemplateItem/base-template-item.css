@@ -13,11 +13,16 @@
     border: none;
 }
 
+[data-testid="bubble_iframe"] {
+    bottom: 84px !important; 
+}
+
 .image-cover-container-inner {
     position: absolute;
     top: 0px;
     bottom: 0px;
     left: 0px;
+    border: 2px solid var(--sugar-black-color);
     right: 0px;
     display: -webkit-box;
     display: -webkit-flex;
@@ -31,7 +36,6 @@
     -webkit-justify-content: center;
     -ms-flex-pack: center;
     justify-content: center;
-    border-radius: 0.25em;
     overflow: hidden;
 }
 

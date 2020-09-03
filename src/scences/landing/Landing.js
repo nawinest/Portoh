@@ -52,7 +52,7 @@ class Landing extends Component {
                   <TemplateContainer />
               </div>
           </div>
-          <div className="bottom-height"></div>
+         
           </>
       )
   }
