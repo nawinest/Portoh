@@ -3,7 +3,15 @@ import Zoom from 'react-medium-image-zoom'
 import './how-to-buy.css'
 import 'react-medium-image-zoom/dist/styles.css'
 
+import { setCurrentPage } from '../../actions/PageManagement'
+import { connect } from 'react-redux'
+
 class HowToBuy extends Component {
+
+    componentDidMount() {
+        this.props.setCurrentPage(3);
+    }
+    
     render() {
         return (
             <div className="container-main">
@@ -40,4 +48,11 @@ class HowToBuy extends Component {
     }
 }
 
-export default HowToBuy;
+const mapStateToProps = function (state) {
+  return {
+    userEnviroment: state.userEnviroment,
+    pageManagement: state.PageManagement
+  }
+}
+const AppWithConnect = connect(mapStateToProps, { setCurrentPage })(HowToBuy)
+export default AppWithConnect

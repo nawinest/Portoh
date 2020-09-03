@@ -2,11 +2,18 @@ import React, { Component } from 'react';
 import Dropdown from 'react-dropdown';
 import TemplateContainer from './TemplateContainer'
 import 'react-dropdown/style.css';
+import { disableFirstMeetMessage } from '../../actions/userEnviroment'
+import { setCurrentPage } from '../../actions/PageManagement'
+import { connect } from 'react-redux'
 
 class Landing extends Component {
 
     _onSelect = (element) => {
         console.log(element)
+    }
+
+    componentDidMount() {
+        this.props.setCurrentPage(0);
     }
 
     render() {
@@ -31,7 +38,8 @@ class Landing extends Component {
                            <p className="description">จัดจำหน่ายเทมเพลตพอร์ตฟอลิโอ เพื่อการใช้สอบเข้าและสัมภาษณ์ </p>
                            <div className="garuntee-component"><img className="tick-icon" src="/images/tick.svg" alt="tick-garuntee" /> การันตีได้รับงาน 100 % </div>
                            <img className="contact-img" src="/images/portoh-contact.09.09.png" alt="contact" />
-                        </div>
+                           <div className="line-it-button" data-lang="en" data-type="friend" data-lineid="@rkn3441i" data-count="true" data-home="true" style={{display: 'none'}}></div>
+                           </div>
                    </div>
               </div>
               <div className="search-list-container">
@@ -52,10 +60,17 @@ class Landing extends Component {
                   <TemplateContainer />
               </div>
           </div>
-         
+
           </>
       )
   }
 }
 
-export default Landing;
+const mapStateToProps = function (state) {
+  return {
+    userEnviroment: state.userEnviroment,
+    pageManagement: state.PageManagement
+  }
+}
+const AppWithConnect = connect(mapStateToProps, { disableFirstMeetMessage, setCurrentPage })(Landing)
+export default AppWithConnect

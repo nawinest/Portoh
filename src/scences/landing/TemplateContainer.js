@@ -9,7 +9,7 @@ class TemplateContainer extends Component {
           <div className="container-list">
                 {
                     contents && contents.map((item, idx) => {
-                        return <BaseTemplateItem data={item}/>
+                        return <BaseTemplateItem key={idx} data={item}/>
                     })
                 }
           </div>

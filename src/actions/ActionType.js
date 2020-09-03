@@ -1,0 +1,2 @@
+export const FIRST_MEET = "FIRST_MEET";
+export const PAGE_MANAGEMENT = "PAGE_MANAGEMENT";

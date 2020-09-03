@@ -6,9 +6,10 @@ class NavbarItem extends Component {
     }
 
     render() {
+        let isActive = this.props.isActive ? " item--active" : "";
         return (
           <>
-          <div className="base-navbar-item" onClick={this.onClickItem}>
+          <div className={`base-navbar-item ${isActive}`} onClick={this.onClickItem}>
                 <img className="image-icon-nav" src={this.props.icon} alt="test" />
                 <p className="navbar-item-title">{this.props.title}</p>
           </div>
