@@ -5,16 +5,21 @@ import 'react-medium-image-zoom/dist/styles.css'
 
 import { setCurrentPage } from '../../actions/PageManagement'
 import { connect } from 'react-redux'
+import { Helmet } from 'react-helmet'
 
 class HowToBuy extends Component {
 
     componentDidMount() {
         this.props.setCurrentPage(3);
     }
-    
+
     render() {
+        const TITLE = 'วิธีการสั่งซื้อ | Portoh'
         return (
             <div className="container-main">
+                <Helmet>
+                  <title>{ TITLE }</title>
+                </Helmet>
                 <div className="main-title-container">
                     <h3 className="main-title">ขั้นตอนการสั่งซื้อ</h3>
                 </div>

@@ -5,6 +5,7 @@ import 'react-dropdown/style.css';
 import { disableFirstMeetMessage } from '../../actions/userEnviroment'
 import { setCurrentPage } from '../../actions/PageManagement'
 import { connect } from 'react-redux'
+import { Helmet } from 'react-helmet'
 
 class Landing extends Component {
 
@@ -25,9 +26,13 @@ class Landing extends Component {
                         ];
         const defaultOption = options[0];
         const defaultOptionColor = optionsColor[0];
+        const TITLE = 'หน้าหลัก | Portoh'
         return (
           <>
           <div className="container-main">
+          <Helmet>
+            <title>{ TITLE }</title>
+          </Helmet>
               <div className="landing-banner-component">
                   <div className="base-image-banner">
                     <img className="image-banner" src="/images/banner3.png" alt="banner" />
