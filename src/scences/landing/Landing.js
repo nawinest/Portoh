@@ -65,7 +65,6 @@ class Landing extends Component {
                   <TemplateContainer />
               </div>
           </div>
-
           </>
       )
   }

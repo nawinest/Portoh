@@ -1,0 +1,17 @@
+.question-component {
+    margin: 1rem 0;
+    padding-bottom: 1rem;
+}
+
+.question-title {
+    font-size: 24px;
+    font-weight: 600
+}
+
+.title-question-answer {
+    font-weight: 400;
+}
+
+.question-ans {
+    font-size: 18px;
+}
