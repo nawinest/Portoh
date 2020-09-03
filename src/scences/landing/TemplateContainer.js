@@ -5,10 +5,14 @@ import data from './data/templates';
 class TemplateContainer extends Component {
   render() {
       let contents = data.contents ? data.contents : []
+      let filter = contents
+      if (this.props.color != "all") {
+          filter = contents.filter((item) => item.colors.includes(this.props.color))
+      }
       return (
           <div className="container-list">
                 {
-                    contents && contents.map((item, idx) => {
+                    filter && filter.map((item, idx) => {
                         return <BaseTemplateItem key={idx} data={item}/>
                     })
                 }

@@ -3,6 +3,8 @@
     --gray-color: #716E6E;
     --base-purple-color: #6935B2;
     --sugar-black-color: #2F2F2F;
+    --dimension: 50px;
+  --thickness: 4px;
     font-family: 'Prompt';
 }
 
@@ -172,6 +174,53 @@
 .item--active {
     border-bottom: none !important;
     border-top: 4px solid var(--base-purple-color) !important;
+}
+
+.loading-container {
+    width: 100%;
+    height: 350px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+@keyframes rotate {
+  to {transform: rotate(360deg);}
+}
+
+.arc {
+  position: relative;
+  width: var(--dimension);
+  height: var(--dimension);
+}
+
+.arc:before, .arc:after {
+  border-bottom: var(--thickness) solid var(--base-purple-color);
+  border-left: var(--thickness) solid transparent;
+  border-radius: 50%;
+  border-right: var(--thickness) solid var(--base-purple-color);
+  border-top: var(--thickness) solid var(--base-purple-color);
+  bottom: 0;
+  box-sizing: border-box;
+  content: '';
+  left: 0;
+  margin: auto;
+  position: absolute;
+  right: 0;
+  top: 0;
+  transform-origin: center center;
+}
+
+.arc:before {
+  animation: rotate 1s ease-in-out infinite;
+  height: 100%;
+  width: 100%;
+}
+
+.arc:after {
+  animation: rotate 1s ease-in-out infinite reverse;
+  height: 50%;
+  width: 50%;
 }
 
 @media only screen and (min-width: 600px) {

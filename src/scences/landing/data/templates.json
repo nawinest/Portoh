@@ -3,7 +3,8 @@
         {
         "images_cover": "/template_cover/p0001.png",
         "price": "150",
-        "id": "P0001"
+        "id": "P0001",
+        "colors": ["black", "gray"]
         }
     ]
 }

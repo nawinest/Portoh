@@ -6,26 +6,54 @@ import { disableFirstMeetMessage } from '../../actions/userEnviroment'
 import { setCurrentPage } from '../../actions/PageManagement'
 import { connect } from 'react-redux'
 import { Helmet } from 'react-helmet'
+const optionsColor = [
+                  { value: 'all', label: 'ไม่จำกัดสี' },
+                  { value: 'black', label: 'สีดำ' },
+                  { value: 'gray', label: 'สีเทา' },
+                  { value: 'pink', label: 'ชมพู' },
+                ];
 
 class Landing extends Component {
 
-    _onSelect = (element) => {
-        console.log(element)
+    state = {
+        color: 'all',
+        colorSelected: 'all',
+        defaultOptionColor: optionsColor[0],
+        mockLoading: false
     }
+
+    _onSelect = (element) => {
+        this.setState({
+            defaultOptionColor: element,
+            color: element.value
+        })
+    }
+
+    _onSelectFac = (element) => {
+        this.setState({
+            defaultOptionColor: element,
+            color: element.value
+        })
+    }
+
 
     componentDidMount() {
         this.props.setCurrentPage(0);
     }
 
+    onClickSearch = () => {
+        this.setState({ mockLoading: true })
+        let time = Math.floor(Math.random() * 500) + 1200
+        console.log(time)
+        setTimeout(()=>{this.setState({mockLoading: false})}, time)
+        this.setState({
+            colorSelected: this.state.color
+        })
+    }
+
     render() {
-        const options = [
-                          'ทุกคณะ'
-                        ];
-        const optionsColor = [
-                          'ไม่จำกัดสี'
-                        ];
+        const options = ['ทุกคณะ'];
         const defaultOption = options[0];
-        const defaultOptionColor = optionsColor[0];
         const TITLE = 'หน้าหลัก | Portoh'
         return (
           <>
@@ -51,18 +79,20 @@ class Landing extends Component {
                   <div className="selection-option-search">
                       <div className="item-selection faculty-selection">
                         <p>ค้นหาจากคณะ</p>
-                        <Dropdown options={options} onChange={this._onSelect} value={defaultOption} placeholder="Select an option" />
+                        <Dropdown options={options} onChange={this._onSelectFac} value={defaultOption} placeholder="Select an option" />
                       </div>
                       <div className="item-selection faculty-selection">
                         <p>ค้นหาจากโทนสี</p>
-                        <Dropdown options={optionsColor} onChange={this._onSelect} value={defaultOptionColor} placeholder="Select an option" />
+                        <Dropdown options={optionsColor} onChange={this._onSelect} value={this.state.defaultOptionColor} placeholder="Select an option" />
                       </div>
                       <div className="item-selection">
-                        <button className="search-button">ค้นหา</button>
+                        <button onClick={this.onClickSearch} className="search-button">ค้นหา</button>
                       </div>
                   </div>
                   <p className="search-title">ผลการค้นหา</p>
-                  <TemplateContainer />
+                  {
+                      this.state.mockLoading ? <div className="loading-container"><div className="arc"></div></div> : <TemplateContainer color={this.state.colorSelected}/>
+                  }
               </div>
           </div>
           </>
