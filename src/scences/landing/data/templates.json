@@ -1,10 +1,22 @@
 {
     "contents": [
         {
-        "images_cover": "/template_cover/p0001.png",
-        "price": "150",
-        "id": "P0001",
-        "colors": ["black", "gray"]
+            "images_cover": "/template_cover/p0001.jpg",
+            "price": "180",
+            "id": "P0001",
+            "colors": [
+                "pink",
+                "pastel"
+            ]
+        },
+        {
+            "images_cover": "/template_cover/p0002.png",
+            "price": "180",
+            "id": "P0002",
+            "colors": [
+                "pink",
+                "pastel"
+            ]
         }
     ]
 }

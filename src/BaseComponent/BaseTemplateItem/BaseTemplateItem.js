@@ -20,7 +20,7 @@ class BaseTemplateItem extends Component {
                 </p>
                 <p className="price-label"> ราคา {this.props.data.price} บาท </p>
                 <p className="description-label"> <img className="description-label-icon" src="/images/png.svg"/> ได้รับไฟล์เป็น .PNG </p>
-                <p className="description-label"> <img className="description-label-icon" src="/images/analysis.svg"/> มีไฟล์วิดีโอสอนการทำโดย Photoshop, word และ
+                <p className="description-label"> <img className="description-label-icon" src="/images/analysis.svg"/> มีไฟล์วิดีโอสอนการทำทั้งบนมือถือและคอมพิวเตอร์
 บนสมาร์ทโฟน </p>
             </div>
           </div>

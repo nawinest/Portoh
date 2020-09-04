@@ -8,6 +8,7 @@ import { connect } from 'react-redux'
 import { Helmet } from 'react-helmet'
 const optionsColor = [
                   { value: 'all', label: 'ไม่จำกัดสี' },
+                  { value: 'pastel', label: 'พาสเทล' },
                   { value: 'black', label: 'สีดำ' },
                   { value: 'gray', label: 'สีเทา' },
                   { value: 'pink', label: 'ชมพู' },
